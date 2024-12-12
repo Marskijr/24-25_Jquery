@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        // alert ("test")
+        $("#walker").animate({
+          left: '+=50px' ,
+        });
+
+
+        $("#jogger").animate({
+          left: '+=100px' ,
+        });
+
+
+        $("#runner").animate({
+          left: '+=200px' ,
+        });
+
+      });
+
+    });
+
+  </script>
+</head>
+<body>
+<button>Click To Start Race</button>
+
+<img id="walker" style="height:250px;width:200px;position:absolute;" src="img/walking.png" alt="walking">
+<img id="jogger" style="height:250px;width:250px;position:absolute;" src="img/jog.png" alt="jog">
+<img id="runner" style="height:250px;width:250px;position:absolute;" src="img/run.png" alt="run">
+<img id="finishline" style="left:4000px;height:250px;width:250px;position:absolute;" src="img/finishline.jpg" alt="finishline">
+</body>
+</html>
