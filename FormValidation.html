@@ -4,12 +4,52 @@
     <meta charset="UTF-8">
     <title>FormValidation</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $("#submit").click(function(){
+        if($("#fname").val().length === 0){
+          $("#fname").css({"background-color": "red"});
+          $("#fnameE").css({"display":"block"});
+
+
+        }
+      });
+    });
+    $("#submit").click(function(){
+      if($("#fname").val().length === 0){
+        $("#fname").css({"background-color": "red"});
+        $("#fnameE").css({"display":"block"});
+
+
+      }
+    });
+    });
+    $("#submit").click(function(){
+      if($("#fname").val().length === 0){
+        $("#fname").css({"background-color": "red"});
+        $("#fnameE").css({"display":"block"});
+
+
+      }
+    });
+    });
+    $("#submit").click(function(){
+      if($("#fname").val().length === 0){
+        $("#fname").css({"background-color": "red"});
+        $("#fnameE").css({"display":"block"});
+
+
+      }
+    });
+    });
+  </script>
 </head>
 <body>
 <form>
   <label for="fname">First Name</label>
-  <input type="text" name="fname" id="fname" /><br />
-
+  <input type="text" name="fname" id="fname" />
+<div id="fnameE" style="display:none">Please enter your first name.</div>
   <label for="lname">Last Name</label>
   <input type="text" name="lname" id="lname" /><br />
 
@@ -26,7 +66,7 @@
   <input type="text" name="city" id="city" />
 
   <label for="state">State</label>
-  <input type="text" name="state" id="state"<select>
+  <select name="state" id="state">
   <option value="AL">Alabama</option>
   <option value="AK">Alaska</option>
   <option value="AZ">Arizona</option>
@@ -98,9 +138,10 @@
   <label for="password2">Confirm Password</label>
   <input type="text" name="password2" id="password2" /><br />
   <input type="checkbox" name="consent" id="consent"><label for="consent">I agree to receive mail every 2 seconds for your dumb products.<br />
-  <button type="submit" name="Submit" id="Submit" >Submit</button>
+  <button type="button" name="Submit" id="submit" >Submit</button>
 
 </form>
+
 
 
 
