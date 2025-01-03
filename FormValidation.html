@@ -6,42 +6,32 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     $(document).ready(function(){
-
       $("#submit").click(function(){
         if($("#fname").val().length === 0){
           $("#fname").css({"background-color": "red"});
-          $("#fnameE").css({"display":"block"});
-
-
+          $("#fnameE").css({"display": "block"});
+        }
+        if($("#lname").val().length === 0){
+          $("#lname").css({"background-color": "red"});
+          $("#lnameE").css({"display":"block"});
+        }
+        if($("#dob").val().length === 0){
+          $("#dob").css({"background-color": "red"});
+          $("#dobE").css({"display":"block"});
+        }
+        if($("#street").val().length === 0){
+          $("#street").css({"background-color": "red"});
+          $("#streetE").css({"display":"block"});
+        }
+        if($("#city").val().length === 0){
+          $("#city").css({"background-color": "red"});
+          $("#cityE").css({"display":"block"});
+        }
+        if($("#zip").val().length === 0){
+          $("#zip").css({"background-color": "red"});
+          $("#zipE").css({"display":"block"});
         }
       });
-    });
-    $("#submit").click(function(){
-      if($("#fname").val().length === 0){
-        $("#fname").css({"background-color": "red"});
-        $("#fnameE").css({"display":"block"});
-
-
-      }
-    });
-    });
-    $("#submit").click(function(){
-      if($("#fname").val().length === 0){
-        $("#fname").css({"background-color": "red"});
-        $("#fnameE").css({"display":"block"});
-
-
-      }
-    });
-    });
-    $("#submit").click(function(){
-      if($("#fname").val().length === 0){
-        $("#fname").css({"background-color": "red"});
-        $("#fnameE").css({"display":"block"});
-
-
-      }
-    });
     });
   </script>
 </head>
