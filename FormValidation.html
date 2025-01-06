@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>FormValidation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>fORM vALIDATION SIGNUP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 500px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #5cb85c;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4cae4c;
+    }
+
+
+    .password-strength {
+      margin-top: 5px;
+    }
+
+    .password-strength div {
+      height: 5px;
+      border-radius: 4px;
+    }
+
+    .weak {
+      width: 33%;
+      background-color: red;
+    }
+
+    .medium {
+      width: 66%;
+      background-color: orange;
+    }
+
+    .strong {
+      width: 100%;
+      background-color: green;
+    }
+  </style>
+</head>
+
   <script>
+    function getPasswordStrength(password) {
+      if (password.length < 8) {
+        return 'weak';
+      }
+      if (password.match(/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/)) {
+        return 'strong';
+      }
+      return 'medium';
+    }
     $(document).ready(function(){
       $("#submit").click(function(){
         if($("#fname").val().length === 0){
@@ -47,10 +136,15 @@
   </script>
 </head>
 <body>
+
+<div class="container">
+  <h1>(Not Stealing Your Info)</h1>
 <form>
+
   <label for="fname">First Name</label>
   <input type="text" name="fname" id="fname" />
 <div id="fnameE" style="display:none">Please enter your first name.</div>
+
   <label for="lname">Last Name</label>
   <input type="text" name="lname" id="lname" /><br />
 
